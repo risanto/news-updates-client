@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+/* Elements ===================================== */
+
+
+/* General ====================================== */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: @font-family;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: @font-normal;
+    background-color: @tertiary;
+}
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        .color-white
+    }
+
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+p, li {
+    font-size: @font-normal;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: @font-large;
+    color: @primary;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font-large {
+    font-size: @font-large;
+}
+
+.font-x-large {
+    font-size: @font-x-large;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.bg-blue {
+    background-color: cornflowerblue;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.color-secondary {
+    color: @secondary;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-teal {
+    color: @teal;
+}
+
+.border-rad-5 {
+    border-radius: 5px;
+}
+
+.border-top-rad-5 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.border-bot-rad-5 {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Variables ==================================== */
+
+@font-family: 'Source Sans Pro', sans-serif;
+@font-normal: 1.6rem;
+@font-large: 2rem;
+@font-x-large: 2.9rem;
+
+@media (min-width: 500px) {
+    @font-normal: 2rem;
+}
+
+@primary: #edefc7;
+@secondary: #5EBAC9;
+@tertiary: #FAFAD3;
+@light-grey: #eeeeee;
+@teal: #5EBAC9;
+
+/* Flex ========================================= */
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* Padding & margin ==============================*/
+
+.p(@size){
+    padding: @size;
+}
+
+.p-5 {
+    .p(5px)
+}
+
+.p-10 {
+    .p(10px)
+}
+
+.p-20 {
+    .p(20px)
+}
+
+.ph-10 {
+    .p(0 10px)
+}
+
+.ph-20 {
+    .p(0 20px)
+}
+
+.pv-20 {
+    .p(20px 0)
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mh-20 {
+    margin: 0 20px;
+}
+
+.max-w-300 {
+    max-width: 300px;
+}
+
+.max-w-500 {
+    max-width: 500px;
+}
+
+.max-w-70pc {
+    max-width: 70%;
+}
+
+.max-w-90pc {
+    max-width: 90%;
+}
+
+.md_max-w-500 {
+    @media (min-width: 500px){
+        max-width: 500px;
+    }
+}
+
+.full-h-min(@subtraction){
+    height: calc(100vh - @subtraction);
+}
+
+.full-h {
+    .full-h-min(0px)
+}
+
+.full-h-min-20 {
+    .full-h-min(20px)
+}
+
+.full-h-min-30 {
+    .full-h-min(30px)
+}
+
+.full-h-min-40 {
+    .full-h-min(40px)
+}
+
+.full-h-min-60 {
+    .full-h-min(60px)
+}
+
+.full-h-min-80 {
+    .full-h-min(80px)
+}
+
+.full-h-min-100 {
+    .full-h-min(100px)
+}
+
+.full-h-min-120 {
+    .full-h-min(120px)
+}
+
+.full-h-min-240 {
+    .full-h-min(240px)
+}
+
+.full-w-min(@subtraction){
+    width: calc(100vw - @subtraction);
+}
+
+.full-w {
+    .full-w-min(0px)
+}
+
+
+/* Display =======================================*/
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Animation =====================================*/
+
+.rotate {
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+
+    &:hover {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        cursor: pointer;
+    }
+}
+
+/* Components ====================================*/
+
+.btn {
+    background-color: @secondary;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Extras ========================================*/
