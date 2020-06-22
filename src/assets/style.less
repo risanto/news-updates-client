@@ -19,14 +19,14 @@ html {
 
 body {
     font-size: @font-normal;
-    background-color: @tertiary;
+    background-color: white;
 }
 
 a {
     text-decoration: none;
 
     &:visited {
-        .color-white
+        color: black;
     }
 
     &:hover {
@@ -44,7 +44,7 @@ p {
 
 h1 {
     font-size: @font-large;
-    color: @primary;
+    color: black;
 }
 
 .bold {
@@ -69,6 +69,10 @@ h1 {
 
 .bg-white {
     background-color: white;
+}
+
+.color-primary {
+    color: @primary;
 }
 
 .color-secondary {
@@ -108,7 +112,7 @@ h1 {
     @font-normal: 2rem;
 }
 
-@primary: #edefc7;
+@primary: #e97c48;
 @secondary: #5EBAC9;
 @tertiary: #FAFAD3;
 @light-grey: #eeeeee;
